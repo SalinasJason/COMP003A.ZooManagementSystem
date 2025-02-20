@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
+    /// <summary>
+    /// Represents a base class for animals
+    /// </summary>
     internal abstract class Animal
     {
+        // Fields
         private string _name;
         private string _species;
 
+        // Properties
         public string Name
         {
             get { return _name; }
@@ -44,6 +49,9 @@ namespace COMP003A.ZooManagementSystem
             }
         }
 
+        /// <summary>
+        /// Abstract method with no implmetaion
+        /// </summary>
         public abstract void MakeSound();
     }
 }
