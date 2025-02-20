@@ -8,17 +8,45 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Zoo Management System!");
-            Console.WriteLine("\nPlease choose an option:");
-            Console.WriteLine("1. Add a Lion");
-            Console.WriteLine("2. Add a Parrot");
-            Console.WriteLine("3. Display All Animals");
-            Console.WriteLine("4. Describe an Aniaml");
-            Console.WriteLine("5. Exit");
-
             int choice = 0;
-            Console.Write("\nYour choice: ");
-            choice = int.Parse(Console.ReadLine()); 
+            do
+            {
+                Console.WriteLine("Welcome to the Zoo Management System!");
+                Console.WriteLine("\nPlease choose an option:");
+                Console.WriteLine("1. Add a Lion");
+                Console.WriteLine("2. Add a Parrot");
+                Console.WriteLine("3. Display All Animals");
+                Console.WriteLine("4. Describe an Aniaml");
+                Console.WriteLine("5. Exit");
+
+                Console.Write("\nYour choice: ");
+                choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1: // Add a lion
+                        Console.WriteLine();
+                        break;
+                    case 2: // Add a parrot
+                        Console.WriteLine();
+                        break;
+                    case 3: // Displays all animals
+                        Console.WriteLine();
+                        break;
+                    case 4: // Describes an animal
+                        Console.WriteLine();
+                        break;
+                    case 5: // Exit
+                        Console.WriteLine();
+                        break;
+                    default:
+                        break;
+
+                }
+
+            }   while (choice != 5);
+
+
         }
     }
 }
