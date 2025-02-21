@@ -25,10 +25,8 @@ namespace COMP003A.ZooManagementSystem
                 {
                     throw new ArgumentException();
                 }
-                else
-                {
-                    _name = value;
-                }
+                _name = value;
+                
             }
         }
 
@@ -42,10 +40,7 @@ namespace COMP003A.ZooManagementSystem
                 {
                     throw new ArgumentException();
                 }
-                else
-                {
-                    _species = value;
-                }
+                _species = value;
             }
         }
 

@@ -22,7 +22,14 @@ namespace COMP003A.ZooManagementSystem
                 Console.WriteLine("5. Exit");
 
                 Console.Write("\nYour choice: ");
-                choice = int.Parse(Console.ReadLine());
+                try
+                {
+                    choice = int.Parse(Console.ReadLine());
+                }
+                catch 
+                {
+                    Console.WriteLine("Invaild input, please input valid number (1-5)");
+                }
 
                 switch (choice)
                 {
@@ -33,8 +40,16 @@ namespace COMP003A.ZooManagementSystem
                         Console.Write("Enter the species of the lion: ");
                         string UserInputLionSpecies = Console.ReadLine();
 
-                        Lion lion = new Lion(UserInputLionName, UserInputLionSpecies);
-                        animal.Add(lion);
+                        try
+                        {
+                            Lion lion = new Lion(UserInputLionName, UserInputLionSpecies);
+                            animal.Add(lion);
+                            Console.WriteLine("Lion added successfully!");
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Error: Name or Species is empty. Please provide a vaild name or species.");
+                        }
 
 
                         break;
@@ -45,8 +60,16 @@ namespace COMP003A.ZooManagementSystem
                         Console.Write("Enter the species of the parrot: ");
                         string UserInputParrotSpecies = Console.ReadLine();
 
-                        Parrot parrot = new Parrot(UserInputParrotName, UserInputParrotSpecies);
-                        animal.Add(parrot);
+                        try
+                        {
+                            Parrot parrot = new Parrot(UserInputParrotName, UserInputParrotSpecies);
+                            animal.Add(parrot);
+                            Console.WriteLine("Parrot added successfully!");
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Error: Name or Species is empty. Please provide a vaild name or species.");
+                        }
 
                         break;
                     case 3: // Displays all animals
@@ -62,9 +85,10 @@ namespace COMP003A.ZooManagementSystem
                         ZooUtility.DescribeAnimal("Charlie", "Elephant", 21);
                         break;
                     case 5: // Exit
-                        Console.WriteLine();
+                        Console.WriteLine("Exiting...");
                         break;
                     default:
+                        Console.WriteLine("Invaild input, Please choose from (1-5)");
                         break;
 
                 }
