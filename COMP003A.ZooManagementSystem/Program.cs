@@ -46,12 +46,7 @@ namespace COMP003A.ZooManagementSystem
                             animal.Add(lion);
                             Console.WriteLine("Lion added successfully!");
                         }
-                        catch
-                        {
-                            Console.WriteLine("Error: Name or Species is empty. Please provide a valid name or species.");
-                        }
-
-
+                        catch { }
                         break;
                     case 2: // Add a parrot
                         Console.Write("Enter the name of the parrot: ");
@@ -66,11 +61,7 @@ namespace COMP003A.ZooManagementSystem
                             animal.Add(parrot);
                             Console.WriteLine("Parrot added successfully!");
                         }
-                        catch
-                        {
-                            Console.WriteLine("Error: Name or Species is empty. Please provide a valid name or species.");
-                        }
-
+                        catch { }
                         break;
                     case 3: // Displays all animals
                         Console.WriteLine("Displaying all animals: ");

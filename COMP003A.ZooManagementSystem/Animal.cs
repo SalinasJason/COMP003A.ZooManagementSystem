@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Linq;
 
 namespace COMP003A.ZooManagementSystem
 {
@@ -23,6 +25,7 @@ namespace COMP003A.ZooManagementSystem
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
+                    Console.WriteLine("Error: Name cannot be empty. Please provide a valid name.");
                     throw new ArgumentException();
                 }
                 _name = value;
@@ -38,6 +41,7 @@ namespace COMP003A.ZooManagementSystem
             {
                 if (string.IsNullOrEmpty(value))
                 {
+                    Console.WriteLine("Error: Species cannot be empty. Please provide a valid species.");
                     throw new ArgumentException();
                 }
                 _species = value;
