@@ -8,10 +8,12 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
+            List<Animal> animal = new List<Animal>();
             int choice = 0;
+
+            Console.WriteLine("Welcome to the Zoo Management System!");
             do
             {
-                Console.WriteLine("Welcome to the Zoo Management System!");
                 Console.WriteLine("\nPlease choose an option:");
                 Console.WriteLine("1. Add a Lion");
                 Console.WriteLine("2. Add a Parrot");
@@ -25,13 +27,34 @@ namespace COMP003A.ZooManagementSystem
                 switch (choice)
                 {
                     case 1: // Add a lion
-                        Console.WriteLine();
+                        Console.Write("Enter the name of the lion: ");
+                        string UserInputLionName = Console.ReadLine();
+
+                        Console.Write("Enter the species of the lion: ");
+                        string UserInputLionSpecies = Console.ReadLine();
+
+                        Lion lion = new Lion(UserInputLionName, UserInputLionSpecies);
+                        animal.Add(lion);
+
+
                         break;
                     case 2: // Add a parrot
-                        Console.WriteLine();
+                        Console.Write("Enter the name of the parrot: ");
+                        string UserInputParrotName = Console.ReadLine();
+
+                        Console.Write("Enter the species of the parrot: ");
+                        string UserInputParrotSpecies = Console.ReadLine();
+
+                        Parrot parrot = new Parrot(UserInputParrotName, UserInputParrotSpecies);
+                        animal.Add(parrot);
+
                         break;
                     case 3: // Displays all animals
-                        Console.WriteLine();
+                        Console.WriteLine("Displaying all animals: ");
+                        foreach (Animal animals in animal)
+                        {
+                            animals.MakeSound();
+                        }
                         break;
                     case 4: // Describes an animal
                         Console.WriteLine();
