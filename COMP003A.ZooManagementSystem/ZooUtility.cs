@@ -18,7 +18,7 @@ namespace COMP003A.ZooManagementSystem
         /// <param name="name"></param>
         public static void DescribeAnimal(string name)
         {
-            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Animal Name: {name}");
         }
 
         /// <summary>

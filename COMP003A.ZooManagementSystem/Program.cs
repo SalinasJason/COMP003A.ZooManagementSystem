@@ -57,7 +57,9 @@ namespace COMP003A.ZooManagementSystem
                         }
                         break;
                     case 4: // Describes an animal
-                        Console.WriteLine();
+                        ZooUtility.DescribeAnimal("Simba");
+                        ZooUtility.DescribeAnimal("Polly", "Psittaciformes");
+                        ZooUtility.DescribeAnimal("Charlie", "Elephant", 21);
                         break;
                     case 5: // Exit
                         Console.WriteLine();
