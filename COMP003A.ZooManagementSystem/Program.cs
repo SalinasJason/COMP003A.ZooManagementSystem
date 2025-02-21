@@ -28,7 +28,7 @@ namespace COMP003A.ZooManagementSystem
                 }
                 catch 
                 {
-                    Console.WriteLine("Invaild input, please input valid number (1-5)");
+                    Console.WriteLine("Invalid input, please input valid number (1-5)");
                 }
 
                 switch (choice)
@@ -48,7 +48,7 @@ namespace COMP003A.ZooManagementSystem
                         }
                         catch
                         {
-                            Console.WriteLine("Error: Name or Species is empty. Please provide a vaild name or species.");
+                            Console.WriteLine("Error: Name or Species is empty. Please provide a valid name or species.");
                         }
 
 
@@ -68,7 +68,7 @@ namespace COMP003A.ZooManagementSystem
                         }
                         catch
                         {
-                            Console.WriteLine("Error: Name or Species is empty. Please provide a vaild name or species.");
+                            Console.WriteLine("Error: Name or Species is empty. Please provide a valid name or species.");
                         }
 
                         break;
@@ -88,7 +88,7 @@ namespace COMP003A.ZooManagementSystem
                         Console.WriteLine("Exiting...");
                         break;
                     default:
-                        Console.WriteLine("Invaild input, Please choose from (1-5)");
+                        Console.WriteLine("Invalid input, Please choose from (1-5)");
                         break;
 
                 }
